@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>מדריך למידה עצמית - AI והנדסת נתונים</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; text-align: center; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        h3 { color: #16a085; }
+        code { background-color: #f8f8f8; padding: 2px 5px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; direction: ltr; display: inline-block; }
+        .link-box {
+            border: 2px solid #3498db;
+            background-color: #ebf5fb;
+            color: #2980b9;
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-right: 5px solid #ffecb5;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #f8d7da;
+            border-right: 5px solid #f5c6cb;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #721c24;
+        }
+        a { color: #3498db; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin-right: 20px; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 ללמוד איך ללמוד: המדריך למפתח העצמאי</h1>
+        <p>כשאתם כותבים קוד ב-Python 🐍, ובמיוחד בעולמות ה-AI והנדסת הנתונים, אתם לא צריכים לזכור הכל בעל פה. היכולת החשובה ביותר שלכם היא לדעת למצוא את המידע הנכון ולפענח את מה שהמחשב אומר לכם.</p>
+
+        <hr>
+
+        <h2>1. איך להשתמש בתיעוד (Documentation) 🔍</h2>
+        <p>לפני שצוללים לחיפוש, בואו נבין שני מושגים בסיסיים:</p>
+        <ul>
+            <li><strong>סינטקס (Syntax):</strong> אלו הם "חוקי הדקדוק" של השפה. אם אתם יודעים מה אתם רוצים לעשות (למשל: למחוק עמודה בטבלה) אבל לא זוכרים את הפקודה, חפשו בגוגל: <code>How to delete a column in Pandas</code>.</li>
+            <li><strong>תיעוד (Documentation):</strong> זהו "ספר ההוראות" הרשמי. הוא מסביר בדיוק מה כל פונקציה עושה.</li>
+        </ul>
+
+        <h3>איך בנוי דף תיעוד?</h3>
+        <p>דפי תיעוד נראים דומים מאוד בין ספריות שונות. אלו החלקים שאתם חייבים להכיר:</p>
+        <ol>
+            <li><strong>חתימת הפונקציה (Signature):</strong> השורה הראשונה שמציגה את שם הפונקציה ואת הפרמטרים שהיא מקבלת.
+                <ul>
+                    <li>פרמטרים בלי ערך הם חובה.</li>
+                    <li>פרמטרים עם <code>=</code> (כמו <code>axis=0</code>) הם פרמטרים עם ערך ברירת מחדל – הם שם גם אם לא תכתבו אותם.</li>
+                </ul>
+            </li>
+            <li><strong>תיאור (Description):</strong> הסבר קצר על מה הפונקציה עושה.</li>
+            <li><strong>פרמטרים (Parameters):</strong> רשימה מפורטת שמסבירה מה כל קלט עושה ומה סוג הנתון (מספר, טקסט וכו').</li>
+            <li><strong>ערך חזרה (Returns):</strong> מה הפונקציה "מחזירה" בסוף. האם זה אובייקט חדש? רשימה? או אולי כלום?</li>
+            <li><strong>דוגמאות (Examples):</strong> קטעי קוד מוכנים. <strong>טיפ:</strong> אל תעתיקו "על עיוור". קראו את הדוגמה כדי להבין את הלוגיקה, ואז התאימו אותה לשמות המשתנים שלכם.</li>
+        </ol>
+
+        <div class="link-box">
+            🔗 ראו דוגמה חיה לתיעוד של פונקציית גרפים ב-Seaborn: <br>
+            <a href="https://seaborn.pydata.org/generated/seaborn.histplot.html" target="_blank">Seaborn Documentation: histplot</a>
+        </div>
+
+        <hr>
+
+        <h2>2. להתיידד עם השגיאות ועם ה-Traceback 🛠️</h2>
+        <p>שגיאה היא לא "כישלון", היא רמז מהמחשב. כשהקוד ב-Colab נעצר ומופיע טקסט אדום, זה נקרא <strong>Traceback</strong>.</p>
+        
+        <p>לפני שרצים לחפש פתרון, נסו לחשוב: איזה חלק בקוד שלי גרם לזה? שאלו את עצמכם:</p>
+        <ul>
+            <li>האם סוג הקלט (Type) שהכנסתי לפונקציה הוא מה שהיא מצפה לו?</li>
+            <li>האם העתקתי שורה ושכחתי לשנות שם של משתנה (Variable)?</li>
+            <li>האם יש שגיאת כתיב בשם המשתנה?</li>
+            <li>האם חסר סוגר או נקודתיים במקום קריטי?</li>
+        </ul>
+
+        <h3>איך בנויה ה"מחסנית" (The Stack)?</h3>
+        <p>דמיינו שהמחשב שומר "ערימת צלחות" של פעולות. כשפונקציה אחת קוראת לשנייה, נוספת צלחת לערימה. כשיש שגיאה, המחשב מראה לנו את כל הערימה מהסוף להתחלה:</p>
+        <ul>
+            <li><strong>השורה התחתונה:</strong> ההודעה החשובה ביותר. שם מופיע סוג השגיאה (למשל <code>TypeError</code>) ותיאור קצר של מה השתבש. <strong>תמיד תתחילו לקרוא מכאן!</strong></li>
+            <li><strong>מבנה הבלוקים:</strong> מעל השורה התחתונה תראו פירוט של המסלול. בראש כל בלוק מופיע:
+                <ul>
+                    <li><strong>שם הקובץ (File):</strong> איפה זה קרה.</li>
+                    <li><strong>מספר השורה:</strong> איפה בדיוק הקוד נעצר.</li>
+                    <li><strong>שם הפונקציה:</strong> באיזה חלק של התוכנית היינו.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="note">
+            💡 <strong>חשוב לדעת:</strong> לפעמים תראו שהשגיאה קרתה בתוך קבצים של ספריות כמו Pandas. זה לא אומר שיש שם באג! זה לרוב קורה בגלל קוד שאתם כתבתם ששלח לספרייה נתונים שהיא לא מצפה להם (למשל, ניסיון לחשב ממוצע על עמודת טקסט). כדאי עדיין לחקור את הבלוקים האלו – שמות הפונקציות במימוש הפנימי יכולים לפעמים (גם אם זה נדיר) לעזור להבין את מהות השגיאה. בכל מקרה, חפשו במחסנית את השורה האחרונה ש<strong>אתם</strong> כתבתם.
+        </div>
+
+        <div class="link-box">
+            🖼️ ראו דוגמה לאיך נראה Traceback טיפוסי (שימו לב: ייתכן ותצטרכו להרחיב את השגיאה ב-Colab כדי לראות את כל המחסנית): <br>
+            <a href="https://i.sstatic.net/de8BN.jpg" target="_blank">קישור לתמונה של Traceback</a>
+        </div>
+
+        <h3>מה זה Stack Overflow?</h3>
+        <p>זהו אתר השאלות והתשובות הגדול בעולם למתכנתים. אם אתם לא מבינים את השגיאה, העתיקו את השורה האחרונה לגוגל והוסיפו את המילה <code>stackoverflow</code>.</p>
+        <ul>
+            <li><strong>איך מנווטים?</strong> חפשו את התשובה עם ה-<strong>V הירוק ✅</strong>. זה אומר שהפתרון הזה עבד לשואל המקורי. שימו לב גם למספר ההצבעות (Votes) – ככל שהוא גבוה יותר, התשובה אמינה יותר.</li>
+        </ul>
+
+        <div class="link-box">
+            🔗 ראו דוגמה לדיון בשגיאת KeyError ב-Stack Overflow: <br>
+            <a href="https://stackoverflow.com/questions/10116518/im-getting-key-error-in-python" target="_blank">דיון לדוגמה: KeyError ב-Python</a>
+        </div>
+		
+		<h3>שימוש בסיכום ה-AI של גוגל (AI Overview) 🤖</h3>
+        <p>אם ניסיתם הכל ועדיין לא מצאתם פתרון, גוגל מציגה לעיתים סיכום מבוסס בינה מלאכותית בראש תוצאות החיפוש.</p>
+        <div class="warning">
+            ⚠️ <strong>אל תרפרפו!</strong> הנטייה הטבעית היא לחפש "שורת קוד להעתקה", אבל התשובה לבעיה שלכם מוסתרת לעיתים קרובות בתוך ההסבר המילולי. תקראו כל מילה בסבלנות וביסודיות – לעיתים קרובות הפתרון נמצא ממש מול העיניים שלכם ואתם מפספסים אותו כי אתם ממהרים מדי.
+        </div>
+    </div>
+</body>
+</html>
